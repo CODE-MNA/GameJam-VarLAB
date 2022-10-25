@@ -2,16 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Patrol : MonoBehaviour
+public class PlayerVisuals : MonoBehaviour
 {
+    //Useless Class rn
 
-    float cooldownBetweenPoints;
+    Camera cam;
 
-    [SerializeField]
-    List<Transform> transformList;
+    private void Awake()
+    {
+        cam = Camera.main;
+    }
     void Start()
     {
-        
     }
 
     void Update()

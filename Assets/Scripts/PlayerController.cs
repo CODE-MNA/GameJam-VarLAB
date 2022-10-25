@@ -8,7 +8,9 @@ public class PlayerController : MonoBehaviour
     short speed;
 
     CharacterController controller;
-    Vector3 _input;
+    float moveX;
+    float moveY;
+    Vector3 movement;
 
     private void Awake()
     {
@@ -25,9 +27,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       _input.z = Input.GetAxisRaw("Vertical");
-        _input.x = Input.GetAxisRaw("Horizontal");
+       moveY = Input.GetAxisRaw("Vertical");
+        moveX = Input.GetAxisRaw("Horizontal");
 
-        controller.Move(_input.normalized * speed * Time.deltaTime);
+       movement= transform.forward * moveY + transform.right * moveX;
+
+        controller.SimpleMove(movement* speed);
     }
 }
