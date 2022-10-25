@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     CharacterController controller;
     float moveX;
     float moveY;
+
+    float yVelocity;
     Vector3 movement;
 
     private void Awake()
@@ -32,6 +34,21 @@ public class PlayerController : MonoBehaviour
 
        movement= transform.forward * moveY + transform.right * moveX;
 
-        controller.SimpleMove(movement* speed);
+        yVelocity -= 9.8f * Time.unscaledDeltaTime;
+
+        movement.y = yVelocity;
+    
+        controller.Move(movement * speed * Time.unscaledDeltaTime);
+
+
+        if (controller.isGrounded)
+        {
+            yVelocity = 0;
+
+            if (Input.GetButtonDown("Jump"))
+            {
+                yVelocity = 3;
+            }
+        }
     }
 }
