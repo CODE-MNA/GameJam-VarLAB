@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4198258358425821404}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectileOrigin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 4198258358661865984}
   - component: {fileID: 4198258358661866015}
   - component: {fileID: 4198258358661866014}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShooterBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -138,7 +138,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4198258359027417258}
   - component: {fileID: 4198258359027417257}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 4198258359068010883}
   - component: {fileID: 4198258359068010882}
   - component: {fileID: 4198258359068010881}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectileStarter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
