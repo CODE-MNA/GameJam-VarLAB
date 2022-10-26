@@ -61,9 +61,8 @@ public class TimeControl : MonoBehaviour
 
     private void ActivateSlowdown()
     {
-        print("Activating Time");
 
-        Time.timeScale = 0.1f;
+        Time.timeScale = 0.05f;
         abilityTimer = abilityOriginal;
     }
 }

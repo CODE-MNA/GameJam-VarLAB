@@ -22,6 +22,8 @@ public class WaypointsPatrol : MonoBehaviour
     private float speed;
 
     int currentWaypointIndex;
+    private float turnSpeed = 4f;
+
     void Start()
     {
         InitializePatrolling();
@@ -67,6 +69,8 @@ public class WaypointsPatrol : MonoBehaviour
         if (cooldownTimer > 0)
         {
             cooldownTimer -= Time.deltaTime;
+            RotateTowardsWaypoint(waypointList[currentWaypointIndex]);
+
 
         }
         else
@@ -86,6 +90,15 @@ public class WaypointsPatrol : MonoBehaviour
         nextPos = Vector3.MoveTowards(transform.position, waypoint, speed * Time.deltaTime);
 
         transform.position = nextPos;   
+    }
+
+
+    void RotateTowardsWaypoint(Vector3 waypoint)
+    {
+        Vector3 directionToWaypoint = (waypoint - transform.position);
+
+
+        transform.rotation = Quaternion.Lerp(transform.rotation,Quaternion.LookRotation(directionToWaypoint),turnSpeed * Time.deltaTime);
     }
 
     bool WaypointReached(Vector3 waypoint)

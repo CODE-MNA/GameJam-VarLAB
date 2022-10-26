@@ -241,9 +241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61ee2195af9489b44a9487bdd5c0b4ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondsBetweenPoints: 2
   waypointList: []
-  speed: 14
+  secondsBetweenPoints: 3
+  speed: 7
 --- !u!114 &7780593775577879323
 MonoBehaviour:
   m_ObjectHideFlags: 0

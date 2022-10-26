@@ -29,14 +29,12 @@ public class EnemyShooting : MonoBehaviour
     {
         if(shotTimer <= 0)
         {
-            print("shotting");
             Shoot();
             shotTimer = timeBetweenShots;
 
         }
         else
         {
-            print("cutting");
 
             shotTimer -= Time.deltaTime;
         }
