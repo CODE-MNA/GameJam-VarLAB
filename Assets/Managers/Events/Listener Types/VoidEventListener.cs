@@ -10,7 +10,9 @@ namespace CustomAssetEvents
     [AddComponentMenu("Event Listeners/Single/New Void listener", 1)]
     public class VoidEventListener : BaseGameEventListener<Void, VoidEvent, UnityEvent<Void> > 
 {
+        public VoidEvent onEvent;
 
+        
 }
 
 }
