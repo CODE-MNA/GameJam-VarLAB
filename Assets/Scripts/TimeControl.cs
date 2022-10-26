@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using CustomAssetEvents;
 
 public class TimeControl : MonoBehaviour
 {
@@ -15,15 +14,9 @@ public class TimeControl : MonoBehaviour
     float abilityTimer;
 
     bool triggered = false;
-
-    [SerializeField]
-    VoidEvent onAbilityActivate;
-
-    [SerializeField]
-    VoidEvent onAbilityDeactivate;
-
     void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -32,7 +25,7 @@ public class TimeControl : MonoBehaviour
         if(cooldownTimer <= 0)
         {
             cooldownTimer = 0;
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyUp(KeyCode.LeftShift))
             {
                 cooldownTimer = cooldownOriginal;
                 triggered = true;
@@ -47,26 +40,22 @@ public class TimeControl : MonoBehaviour
         if (triggered)
         {
             ActivateSlowdown();
+
             triggered = false;
-            print("activating");
-
-            onAbilityActivate?.Raise();
         }
 
-        if(abilityTimer <= 0 &&  Time.timeScale != 1)
+        if(abilityTimer <= 0)
         {
-            ResetTime(Time.unscaledDeltaTime);
-        }
-        else if(Time.timeScale != 1)
-        {
+            abilityTimer = 0;
 
-            abilityTimer -= Time.unscaledDeltaTime;
-
-            if (Input.GetKeyUp(KeyCode.LeftShift))
+            if(Time.timeScale != 1)
             {
-                //reset faster
-                ResetTime(Time.unscaledDeltaTime * 40);
+            Time.timeScale = Mathf.MoveTowards(Time.timeScale, 1, Time.unscaledDeltaTime);
             }
+        }
+        else
+        {
+            abilityTimer -= Time.unscaledDeltaTime;
         }
     }
 
@@ -75,29 +64,5 @@ public class TimeControl : MonoBehaviour
 
         Time.timeScale = 0.05f;
         abilityTimer = abilityOriginal;
-    }
-
-    private void ResetTime(float resetSpeed)
-    {
-        abilityTimer = 0;
-
-        if (Time.timeScale != 1)
-        {
-            
-            Time.timeScale = Mathf.MoveTowards(Time.timeScale, 1, resetSpeed);
-        }
-
-        //Completed resetted on this frame
-        if(Time.timeScale == 1)
-        {
-            print("decctivation");   
-        }
-        
-
-    }
-
-    IEnumerator ResetCamColour()
-    {
-        yield return null;  
     }
 }

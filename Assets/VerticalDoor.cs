@@ -8,7 +8,6 @@ public class VerticalDoor : MonoBehaviour
     Vector3 targetOpenPosition;
     Vector3 targetClosePosition;
 
-    [SerializeField]
     private int openDistance = 3;
 
     void Start()
@@ -16,6 +15,7 @@ public class VerticalDoor : MonoBehaviour
         targetClosePosition = transform.position;
         targetOpenPosition = transform.position + transform.up * openDistance;
 
+        print(targetOpenPosition.y);
     }
 
     void Update()

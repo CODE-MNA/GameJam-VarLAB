@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,6 +9,7 @@ public class Detector : MonoBehaviour
 
     [SerializeField]
     int detectorAngle = 20;
+
     Transform player;
     Light spotlight;
 
@@ -29,7 +29,7 @@ public class Detector : MonoBehaviour
         if (PlayerInVision())
         {
             print("Player Hit!");
-           
+
             //TODO: Implement death logic
         }
         else
@@ -42,7 +42,6 @@ public class Detector : MonoBehaviour
     //Returns true if enemy can detect player
     bool PlayerInVision()
     {
-        if(Time.timeScale != 1) return false;
         Vector3 dirToPlayer = new Vector3(player.position.x - transform.position.x, 0, player.position.z - transform.position.z);
 
         if(dirToPlayer.magnitude > detectorRange) return false;
@@ -64,9 +63,6 @@ public class Detector : MonoBehaviour
 
             if (hit.transform.CompareTag("Player"))
             {
-                //Remove all health
-               IHealth playerHealth = hit.transform.GetComponent<IHealth>();
-                playerHealth.Damage(playerHealth.Health);
                 return true;
 
             }

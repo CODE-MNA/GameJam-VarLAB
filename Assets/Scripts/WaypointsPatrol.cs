@@ -111,7 +111,6 @@ public class WaypointsPatrol : MonoBehaviour
     {
         if(currentWaypoint == waypointList.Count - 1)
         {
-            waypointList.Reverse();
             return 0;
         }
         return currentWaypoint + 1;
