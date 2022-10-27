@@ -15,7 +15,6 @@ public class VerticalDoor : MonoBehaviour
         targetClosePosition = transform.position;
         targetOpenPosition = transform.position + transform.up * openDistance;
 
-        print(targetOpenPosition.y);
     }
 
     void Update()
