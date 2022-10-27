@@ -7045,6 +7045,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8790767014790255722}
     m_Modifications:
+    - target: {fileID: 8452968360275978828, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8650563089160933658, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
       propertyPath: m_Name
       value: TriggerShooting
@@ -7113,6 +7117,8 @@ PrefabInstance:
     - {fileID: 8650563089160933663, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
     - {fileID: 8650563089160933648, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
     - {fileID: 6728211223125572098, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
+    - {fileID: 2444011136578374425, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
+    - {fileID: 4059054203343666038, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
 --- !u!4 &7055270523380493113 stripped
 Transform:
@@ -7496,6 +7502,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8790767014790255722}
     m_Modifications:
+    - target: {fileID: 8452968360275978828, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8650563089160933658, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
       propertyPath: m_Name
       value: TriggerCutscene
@@ -7580,6 +7590,9 @@ PrefabInstance:
     - {fileID: 8650563089160933663, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
     - {fileID: 8650563089160933648, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
     - {fileID: 6728211223125572098, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
+    - {fileID: 2444011136578374425, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
+    - {fileID: 4059054203343666038, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
+    - {fileID: 4588228035466150219, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
 --- !u!4 &5103331640245576113 stripped
 Transform:

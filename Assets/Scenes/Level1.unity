@@ -332,13 +332,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 239150062090893165, guid: 8b48322aaadcc4845bb537039b50ec87, type: 3}
+      propertyPath: m_Name
+      value: BlackDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 1846948189619184574, guid: 8b48322aaadcc4845bb537039b50ec87, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.6934998
+      value: 6.5325427
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846948189619184574, guid: 8b48322aaadcc4845bb537039b50ec87, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.91272
       objectReference: {fileID: 0}
     - target: {fileID: 1846948189619184574, guid: 8b48322aaadcc4845bb537039b50ec87, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.28
+      value: 41.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 1846948189619184574, guid: 8b48322aaadcc4845bb537039b50ec87, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.86
       objectReference: {fileID: 0}
     - target: {fileID: 2700672640768937428, guid: 8b48322aaadcc4845bb537039b50ec87, type: 3}
       propertyPath: m_Name
@@ -391,7 +403,7 @@ PrefabInstance:
     - target: {fileID: 7320086451420996181, guid: 8b48322aaadcc4845bb537039b50ec87, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5df239e1e87366c44a068eddc9d562eb, type: 2}
+      objectReference: {fileID: 2100000, guid: 4a1304ee32e251e47bcc86f724b79be3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b48322aaadcc4845bb537039b50ec87, type: 3}
 --- !u!1001 &3073854193501279444
@@ -859,6 +871,30 @@ PrefabInstance:
       propertyPath: eventsAndResponses.Array.data[0].gameEvent
       value: 
       objectReference: {fileID: 11400000, guid: 0adb637550c923c4194fde96724d58d5, type: 2}
+    - target: {fileID: 4069659644623098506, guid: 3dbf01c415b6cc3419ae8edca7a2cfe8, type: 3}
+      propertyPath: eventsAndResponses.Array.data[0].gameEvent
+      value: 
+      objectReference: {fileID: 11400000, guid: 02352e2ca9009324eb4655f30008c82e, type: 2}
+    - target: {fileID: 4069659644623098506, guid: 3dbf01c415b6cc3419ae8edca7a2cfe8, type: 3}
+      propertyPath: eventsAndResponses.Array.data[0].response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069659644623098506, guid: 3dbf01c415b6cc3419ae8edca7a2cfe8, type: 3}
+      propertyPath: eventsAndResponses.Array.data[0].response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7195084271182268650}
+    - target: {fileID: 4069659644623098506, guid: 3dbf01c415b6cc3419ae8edca7a2cfe8, type: 3}
+      propertyPath: eventsAndResponses.Array.data[0].response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069659644623098506, guid: 3dbf01c415b6cc3419ae8edca7a2cfe8, type: 3}
+      propertyPath: eventsAndResponses.Array.data[0].response.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: VerticalDoor, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4069659644623098511, guid: 3dbf01c415b6cc3419ae8edca7a2cfe8, type: 3}
+      propertyPath: keyCollect
+      value: 
+      objectReference: {fileID: 11400000, guid: 02352e2ca9009324eb4655f30008c82e, type: 2}
     - target: {fileID: 7195084271500150792, guid: 3dbf01c415b6cc3419ae8edca7a2cfe8, type: 3}
       propertyPath: m_Name
       value: TriggerEvents
@@ -909,6 +945,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dbf01c415b6cc3419ae8edca7a2cfe8, type: 3}
+--- !u!114 &7195084271182268650 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1591285462033623638, guid: 3dbf01c415b6cc3419ae8edca7a2cfe8, type: 3}
+  m_PrefabInstance: {fileID: 7195084271182268649}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1cae685ff263444836777fb58d0515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8464022461492932719
 PrefabInstance:
   m_ObjectHideFlags: 0
