@@ -39,6 +39,16 @@ public class Detector : MonoBehaviour
 
     }
 
+    public void TurnSpotLightGreen()
+    {
+        spotlight.color = Color.green;
+    }
+
+    public void TurnSpotLightRed()
+    {
+        spotlight.color = Color.red;
+    }
+
     //Returns true if enemy can detect player
     bool PlayerInVision()
     {

@@ -5939,12 +5939,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7218833441907167246}
   m_Layer: 0
-  m_Name: Enemies
+  m_Name: FinalRoomEnemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7218833441907167246
 Transform:
   m_ObjectHideFlags: 0
@@ -7522,7 +7522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8650563089160933661, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.3
+      value: 3.59
       objectReference: {fileID: 0}
     - target: {fileID: 8650563089160933661, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7530,7 +7530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8650563089160933661, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.94
+      value: 18.45
       objectReference: {fileID: 0}
     - target: {fileID: 8650563089160933661, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7564,6 +7564,18 @@ PrefabInstance:
       propertyPath: eventsAndResponses.Array.data[0].gameEvent
       value: 
       objectReference: {fileID: 11400000, guid: 044e98fff5860c040ac7deafbfd51633, type: 2}
+    - target: {fileID: 8650563089160933662, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
+      propertyPath: eventsAndResponses.Array.data[0].response.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7101838906740894806}
+    - target: {fileID: 8650563089160933662, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
+      propertyPath: eventsAndResponses.Array.data[0].response.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650563089160933662, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
+      propertyPath: eventsAndResponses.Array.data[0].response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8650563089160933663, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
     - {fileID: 8650563089160933648, guid: 8857272c5c76665498aed7b03a6bc081, type: 3}
