@@ -177,7 +177,7 @@ MonoBehaviour:
   timeBetweenShots: 1
   shotPoint: {fileID: 4198258358425821404}
   projectile: {fileID: 1230925908618313657, guid: 75a277db323382246a1dd2c360390bc9, type: 3}
-  bulletSpeed: 12
+  bulletSpeed: 25
 --- !u!1 &4198258359068010911
 GameObject:
   m_ObjectHideFlags: 0
