@@ -16,11 +16,17 @@ public class TimeControl : MonoBehaviour
 
     bool triggered = false;
 
+    bool cooldownEventFired = false;
+
     [SerializeField]
     VoidEvent onAbilityActivate;
 
     [SerializeField]
     VoidEvent onAbilityDeactivate;
+
+
+    [SerializeField]
+    VoidEvent onCooldownReset;
 
     void Start()
     {
@@ -31,7 +37,15 @@ public class TimeControl : MonoBehaviour
     {
         if(cooldownTimer <= 0)
         {
+            if (!cooldownEventFired)
+            {
+                onCooldownReset?.Raise();
+                cooldownEventFired = true;
+                
+            }
+
             cooldownTimer = 0;
+
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 cooldownTimer = cooldownOriginal;
@@ -90,6 +104,7 @@ public class TimeControl : MonoBehaviour
         if(Time.timeScale == 1)
         {
             onAbilityDeactivate?.Raise();
+            cooldownEventFired = false;
         }
         
 
