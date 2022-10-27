@@ -25,7 +25,8 @@ public class VerticalDoor : MonoBehaviour
     {
         while(Mathf.Abs(transform.position.y - targetOpenPosition.y)>0.1f)
         {
-            transform.Translate(transform.up * openDistance * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetOpenPosition, openDistance * Time.deltaTime);
+            //transform.Translate(transform.up * openDistance * Time.deltaTime);
             yield return null;
 
         }
@@ -44,7 +45,7 @@ public class VerticalDoor : MonoBehaviour
     {
         while (Mathf.Abs(transform.position.y - targetClosePosition.y) >0.1f)
         {
-            transform.Translate(-transform.up * openDistance * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetClosePosition, openDistance * Time.deltaTime);
             yield return null;
 
         }

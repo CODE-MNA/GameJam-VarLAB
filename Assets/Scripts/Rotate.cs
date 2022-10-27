@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
- 
+    [SerializeField] Light objectLight;
+    private void Start()
+    {
+        objectLight = GetComponent<Light>();
+        objectLight.color = GetComponent<MeshRenderer>().material.color;
+    }
     // Update is called once per frame
     void Update()
     {
