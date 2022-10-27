@@ -12,7 +12,12 @@ public class Rotate : MonoBehaviour
     {
         meshRenderer = GetComponent<MeshRenderer>();
         objectLight = GetComponent<Light>();
-        objectLight.color = meshRenderer.material.color;
+
+        if(objectLight != null && meshRenderer != null)
+        {
+            objectLight.color = meshRenderer.material.color;
+
+        }
 
     }
     // Update is called once per frame
