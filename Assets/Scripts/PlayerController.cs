@@ -45,10 +45,7 @@ public class PlayerController : MonoBehaviour
         {
             yVelocity = 0;
 
-            if (Input.GetButtonDown("Jump"))
-            {
-                yVelocity = 3;
-            }
+        
         }
     }
 }
