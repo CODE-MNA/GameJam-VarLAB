@@ -11,6 +11,10 @@ namespace CustomAssetEvents
     public class VoidEventListener : BaseGameEventListener<Void, VoidEvent, UnityEvent<Void> > 
 {
 
-}
+      
+
+
+
+    }
 
 }

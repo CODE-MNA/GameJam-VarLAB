@@ -1,3 +1,4 @@
+using CustomAssetEvents;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,7 +8,9 @@ public class PlayerHealth : MonoBehaviour,IHealth
 {
     [SerializeField]
     private int maxHealth = 3;
-    public Action OnDeath { get; set; }
+
+
+    public VoidEvent OnDeath;
 
     private int _health;
     public int Health 
@@ -16,7 +19,7 @@ public class PlayerHealth : MonoBehaviour,IHealth
         {
             return _health;
         }
-        set
+         set
         {
             if(value > maxHealth)
             {
@@ -28,6 +31,11 @@ public class PlayerHealth : MonoBehaviour,IHealth
             else
             {
                 _health=0;
+            }
+
+            if (_health <= 0)
+            {
+                OnDeath?.Raise();
             }
         }
         
@@ -41,10 +49,12 @@ public class PlayerHealth : MonoBehaviour,IHealth
             Health -= damage;
         }
 
-        if(Health <= 0)
+        if(_health <= 0)
         {
-            OnDeath?.Invoke();
+            OnDeath?.Raise();
+            Destroy(this);
         }
+
     }
 
     void Start()

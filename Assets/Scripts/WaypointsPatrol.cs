@@ -97,8 +97,11 @@ public class WaypointsPatrol : MonoBehaviour
     {
         Vector3 directionToWaypoint = (waypoint - transform.position);
 
+        Quaternion desiredRot = Quaternion.LookRotation(directionToWaypoint);
 
-        transform.rotation = Quaternion.Lerp(transform.rotation,Quaternion.LookRotation(directionToWaypoint),turnSpeed * Time.deltaTime);
+        if (transform.rotation == desiredRot) return;
+
+        transform.rotation = Quaternion.Lerp(transform.rotation,desiredRot,turnSpeed * Time.deltaTime);
     }
 
     bool WaypointReached(Vector3 waypoint)
@@ -111,6 +114,7 @@ public class WaypointsPatrol : MonoBehaviour
     {
         if(currentWaypoint == waypointList.Count - 1)
         {
+            waypointList.Reverse();
             return 0;
         }
         return currentWaypoint + 1;

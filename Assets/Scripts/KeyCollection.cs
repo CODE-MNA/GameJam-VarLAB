@@ -18,7 +18,7 @@ public class KeyCollection : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            keyCollect.Raise();
+            keyCollect?.Raise();
         }
     }
 }

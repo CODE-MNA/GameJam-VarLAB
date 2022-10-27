@@ -16,6 +16,7 @@ namespace CustomAssetEvents
         //public List<UE> responses;
 
         public List<EventAndResponse<T, E, UE>> eventsAndResponses;
+        int[] ids;
 
         private void OnEnable()
         {
@@ -29,9 +30,12 @@ namespace CustomAssetEvents
         {
             foreach (EventAndResponse < T, E, UE > pair in eventsAndResponses)
             {
+
                 pair.response?.Invoke(parameters); 
             }
         }
+
+       
 
         private void OnDisable()
         {

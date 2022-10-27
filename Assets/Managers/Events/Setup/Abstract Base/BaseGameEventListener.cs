@@ -9,9 +9,9 @@ namespace CustomAssetEvents
     //Abstract class for one argument listeners - Concrete scripts will use type instead of T
     public abstract class BaseGameEventListener<T, E, UE> : MonoBehaviour, IGameEventListener<T> where E : BaseGameEvent<T> where UE : UnityEvent<T>
     {
+        [SerializeField]
          E gameEvent;
 
-        public E GameEvent => gameEvent;
         public UE response;
 
         private void OnEnable()

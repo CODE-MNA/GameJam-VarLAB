@@ -19,7 +19,7 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            collision.collider.GetComponent<IHealth>().Damage(1);
+            collision.collider.GetComponent<IHealth>().Damage(3);
         }
 
         DestroyBullet();

@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Managers/Events/DataEvents/PlayerEvents/OnPlayerDeath.asset.meta
+guid: efd5ddeadf3f3e8439dedaa7d45ce8a7
+========
+guid: f4a3090759f53954c8bba2df20e7a3ba
+>>>>>>>> daf3336fef91f5f0faf11135447857936d0cc4cc:Assets/Managers/Events/DataEvents/KeyPickups/OpenRedDoor.asset.meta
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
