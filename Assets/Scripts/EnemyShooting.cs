@@ -20,7 +20,8 @@ public class EnemyShooting : MonoBehaviour
 
     void Start()
     {
-        shotTimer = timeBetweenShots;
+       
+       shotTimer = UnityEngine.Random.Range(0.1f, timeBetweenShots);
         
     }
 
